@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunTrack — Tu ritmo, tu progreso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="contenedor">
+
+    <header class="encabezado">
+        <div class="logo">RT</div>
+
+        <div>
+            <p class="marca">RUNTRACK</p>
+            <p class="subtitulo">Tu ritmo. Tu progreso.</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <span class="etiqueta">BITÁCORA DE CARRERAS</span>
+        <h1>Corré.<br><span>Registrá.</span><br>Superate.</h1>
+        <p>Guardá cada entrenamiento y seguí tu evolución kilómetro a kilómetro.</p>
+    </section>
+
+    <section class="panel">
+        <div class="titulo-seccion">
+            <div>
+                <span class="numero">01</span>
+                <h2>Nueva carrera</h2>
+            </div>
+            <span class="icono">+</span>
+        </div>
+
+        <form id="formCarrera">
+
+            <div class="campo">
+                <label for="inputFecha">Fecha</label>
+                <input type="date" id="inputFecha" required>
+            </div>
+
+            <div class="fila">
+                <div class="campo">
+                    <label for="inputDistancia">Distancia</label>
+                    <div class="input-con-unidad">
+                        <input type="number" id="inputDistancia" step="0.1" placeholder="5.2" required>
+                        <span>km</span>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="inputDuracion">Duración</label>
+                    <div class="input-con-unidad">
+                        <input type="number" id="inputDuracion" placeholder="32" required>
+                        <span>min</span>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit">
+                Registrar carrera
+                <span>→</span>
+            </button>
+
+        </form>
+
+        <p id="mensajeEstado"></p>
+    </section>
+
+    <section class="historial">
+        <div class="titulo-seccion">
+            <div>
+                <span class="numero">02</span>
+                <h2>Mis carreras</h2>
+            </div>
+        </div>
+
+        <div id="listaCarreras"></div>
+    </section>
+
+    <footer>
+        RUNTRACK <span>•</span> MISIÓN 32
+    </footer>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
